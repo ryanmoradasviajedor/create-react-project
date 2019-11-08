@@ -1,0 +1,2 @@
+            "./composer/deploy_env_file.sh",
+            "./composer/install_deploy_key.sh",

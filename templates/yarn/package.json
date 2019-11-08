@@ -1,0 +1,25 @@
+{
+    "name": ":app_name:",
+    "version": "1.0.0",
+    "description": ":app_name: web site implementation based on Custom EC framework.",
+    "main": "index.js",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@bitbucket.org/spycetek/:app_name:.git"
+    },
+    "author": "SpyceTek Inc.",
+    "license": "UNLICENSED",
+    "homepage": "https://bitbucket.org/spycetek/:app_name:",
+    "dependencies": {},
+    "workspaces": [
+//        "themes/:app_name:/assets",
+//        "plugins/goodbet/custom/assets",
+//        "plugins/spycetek/extensionsshopaholic/assets",
+//        "plugins/spycetek/gmopgshopaholic/assets",
+//        "plugins/spycetek/customordersshopaholic/assets"
+    ]
+}

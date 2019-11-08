@@ -1,0 +1,27 @@
+EnvironmentConfigurationMetadata:
+  DateCreated: '1563008340000'
+  DateModified: '1563008340000'
+Platform:
+  PlatformArn: arn:aws:elasticbeanstalk:ap-southeast-1:078106402841:platform/SpyceTek_PhpNginxPlatform_AmazonLinux/1.2.0
+OptionSettings:
+  aws:elasticbeanstalk:application:environment:
+    EB_APP_ENV: autotest
+    AWS_REGION: ap-southeast-1
+    AWS_S3_BUCKET: autotest-:app_name:
+    AWS_ACCESS_KEY_ID: :web_server_aws_access_key:
+    AWS_SECRET_ACCESS_KEY: :web_server_aws_secret_key:
+  aws:elasticbeanstalk:environment:
+    ServiceRole: aws-elasticbeanstalk-service-role
+    EnvironmentType: SingleInstance
+  aws:autoscaling:launchconfiguration:
+    SecurityGroups: web-server,spycetek-db-access
+    IamInstanceProfile: aws-elasticbeanstalk-ec2-role
+    InstanceType: t2.small
+    EC2KeyName: :ec2_key_name:
+  aws:elasticbeanstalk:container:custom:php:
+    apc_enable_cli: 1
+    opcache_enable_cli: 1
+EnvironmentTier:
+  Type: Standard
+  Name: WebServer
+AWSConfigurationTemplateVersion: 1.1.0.0

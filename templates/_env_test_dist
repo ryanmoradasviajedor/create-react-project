@@ -1,0 +1,85 @@
+# .env file for test environment
+
+# This overrides /config files with the files in the directory of the same name.
+# dev: for local development
+# test: for test server
+# autotest: for automated tests
+# production: for production server
+APP_ENV=test
+
+#################################################
+# For config/app.php
+#################################################
+APP_DEBUG=true
+APP_KEY=XXXXXXXXXXXXXXXXXXXXXX
+APP_URL=:app_url:
+# APP_TIMEZONE should match with the DB's timezone
+APP_TIMEZONE=UTC
+APP_LOCALE=en
+
+# Supported: "single", "daily", "syslog", "errorlog"
+APP_LOG=daily
+
+#################################################
+# For config/cms.php
+#
+# *_DISK supports: "local", "s3"
+# *_CDN is ignored if _DISK is "local"
+#################################################
+CMS_MEDIA_DISK=s3
+CMS_MEDIA_FOLDER=media
+CMS_MEDIA_CDN=XXXXXXXXXXXXXXXXXXXXXX
+CMS_UPLOAD_DISK=s3
+CMS_UPLOAD_FOLDER=uploads
+CMS_UPLOAD_CDN=XXXXXXXXXXXXXXXXXXXXXX
+
+# Stores static pages in the database
+DATABASE_TEMPLATES=true
+
+#################################################
+# For config/database.php
+#################################################
+DB_CONNECTION=mysql
+DB_HOST=XXXXXXXXXXXXXXXXXXXXXX
+DB_PORT=XXXXXXXXXXXXXXXXXXXXXX
+DB_DATABASE=XXXXXXXXXXXXXXXXXXXXXX
+DB_USERNAME=XXXXXXXXXXXXXXXXXXXXXX
+DB_PASSWORD=XXXXXXXXXXXXXXXXXXXXXX
+
+#################################################
+# For Mail configuration
+#################################################
+MAIL_DRIVER=ses
+MAIL_FROM_ADDRESS=XXXXXXXXXXXXXXXXXXXXXX
+MAIL_FROM_NAME=XXXXXXXXXXXXXXXXXXXXXX
+SES_REGION=us-west-2
+
+#################################################
+# Remote Environment (As Source of Test Data)
+# Only for test/development environment.
+# For `database download` & `imageimport` command
+#################################################
+#REMOTE_ENV_HOST=ec2-54-169-129-29.ap-southeast-1.compute.amazonaws.com
+#REMOTE_ENV_WEB_USER=nginx
+#REMOTE_ENV_KEY=/var/lib/nginx/.ssh/key_aws_cocci-custom-test.pem
+#REMOTE_ENV_PJ_DIR=/var/www/html
+REMOTE_ENV_S3_REGION=ap-southeast-1
+REMOTE_ENV_S3_BUCKET=XXXXXXXXXXXXXXXXXXXXXX
+
+#################################################
+# For GMO Payment Gateway Plugin
+#################################################
+# String to differentiate order IDs on shared GMO test shops.
+GMO_ORDER_ID_SUFFIX=-test-
+
+#################################################
+# etc
+#################################################
+CACHE_DRIVER=apc
+SESSION_DRIVER=apc
+QUEUE_DRIVER=sync
+ROUTES_CACHE=true
+ASSET_CACHE=true
+LINK_POLICY=detect
+ENABLE_CSRF=true
+ADMIN_SITE_URL=:admin_site_url:

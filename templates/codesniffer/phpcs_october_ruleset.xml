@@ -1,0 +1,40 @@
+<!-- Recent October CMS comes with phpcs.xml, so this file is kept just for reference. -->
+<?xml version="1.0"?>
+<ruleset name="PSR2 October">
+    <description>The October coding standard based on the PSR2.</description>
+    <!--<arg name="tab-width" value="4"/>-->
+
+    <exclude-pattern>*/assets/*</exclude-pattern>
+
+    <rule ref="Generic.Files.LineLength">
+        <exclude-pattern>*/lang/*</exclude-pattern>
+    </rule>
+
+    <!-- We don't include this naming convention check, because it detects snake case property name came from
+         database column names as error.
+         Rported here: https://github.com/squizlabs/PHP_CodeSniffer/issues/1773
+    -->
+    <!--<rule ref="Squiz.NamingConventions.ValidVariableName"/>-->
+
+    <rule ref="PSR2"/> <!-- PSR2 ruleset includes PSR1 as well -->
+
+    <rule ref="PSR2.ControlStructures.ControlStructureSpacing">
+        <properties>
+            <property name="requiredSpacesAfterOpen" value="1" />
+            <property name="requiredSpacesBeforeClose" value="1" />
+        </properties>
+    </rule>
+    <!-- Below is customization to avoid conflict with above customization -->
+    <rule ref="Squiz.ControlStructures.ForEachLoopDeclaration">
+        <properties>
+            <property name="requiredSpacesAfterOpen" value="1" />
+            <property name="requiredSpacesBeforeClose" value="1" />
+        </properties>
+    </rule>
+    <rule ref="Squiz.ControlStructures.ForLoopDeclaration">
+        <properties>
+            <property name="requiredSpacesAfterOpen" value="1" />
+            <property name="requiredSpacesBeforeClose" value="1" />
+        </properties>
+    </rule>
+</ruleset>

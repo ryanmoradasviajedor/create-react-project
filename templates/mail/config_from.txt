@@ -1,0 +1,4 @@
+    'from' => [
+        'address' => env('MAIL_FROM_ADDRESS', 'support@spycetek.com'),
+        'name' => env('MAIL_FROM_NAME', ':app_name:'),
+    ],

@@ -1,0 +1,36 @@
+/bootstrap/compiled.php
+/vendor
+/modules
+composer.phar
+.idea
+.env
+.env.*.php
+.env.php
+*.log
+sftp-config.json
+selenium.php
+configure_env.conf
+
+# OS or editor misc files
+*~
+*.bak
+Thumbs.db
+desktop.ini
+.DS_Store
+*.zip
+
+# for netbeans
+nbproject
+
+# Eclipse setting files
+.buildpath
+.project
+.settings
+.idea
+
+# IDE Helper
+_ide_helper*.php
+.phpstorm.meta.php
+
+# npm/yarn 3rd party modules
+node_modules

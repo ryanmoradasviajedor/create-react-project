@@ -1,0 +1,3 @@
+        "pre-install-cmd": [
+            "./composer/install_deploy_key.sh"
+        ],

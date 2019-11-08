@@ -1,0 +1,36 @@
+# General
+ENV_NAME=test1
+APP_NAME=samuraicraft
+BASE_DOMAIN=spycetek.com
+AWS_PROFILE=xxxxxxxxxxxx
+
+# For S3
+S3_REGION=ap-southeast-1
+
+# Files To Be Uploaded To S3
+BITBUCKET_SSH_KEY_PATH=/Users/kanji/.ssh/deploy_key_for_spycetek_repositories/id_rsa_bitbucket_spycetek
+AUTHORIZED_KEYS_PATH=/Users/kanji/.ssh/access_keys_under_spycetek_test_account/october_authorized_keys
+
+# For Saved Configuration
+PLATFORM_ARN=arn:aws:elasticbeanstalk:ap-southeast-1:078106402841:platform/SpyceTek_PhpNginxPlatform_AmazonLinux/1.3.0
+WEB_SERVER_AWS_REGION=ap-southeast-1
+WEB_SERVER_AWS_ACCESS_KEY_ID=XXXXXXXXXXXXXXXXXX
+WEB_SERVER_AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+EB_INSTANCE_TYPE=t3.micro
+EC2_KEY_NAME=key_aws_kanji-furuhashi
+
+# For .env File
+DB_HOST=spycetek-db-test-1.csjmwsmapt0o.ap-southeast-1.rds.amazonaws.com
+DB_PORT=3306
+DB_DATABASE=samurai
+DB_USERNAME=samurai
+DB_PASSWORD=Fb76PkVD
+
+PROP_KEY_SHOP_ID=XXXXXXXXXXXXXXXXXX
+PROP_KEY_SHOP_PW=XXXXXXXXXXXXXXXXXX
+PROP_KEY_SITE_ID=XXXXXXXXXXXXXXXXXX
+PROP_KEY_SITE_PW=XXXXXXXXXXXXXXXXXX
+
+# For EB Environment Creation
+# `EB_CNAME_SUFFIX` is just a random string for obfuscation
+EB_CNAME_SUFFIX=bw29egpena4

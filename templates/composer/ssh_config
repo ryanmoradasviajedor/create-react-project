@@ -1,0 +1,6 @@
+Host bitbucket.org
+    HostName bitbucket.org
+    IdentityFile /root/.ssh/id_rsa_bitbucket_spycetek
+    User git
+    Port 22
+    StrictHostKeyChecking no

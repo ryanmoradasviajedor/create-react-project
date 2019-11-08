@@ -1,0 +1,27 @@
+EnvironmentConfigurationMetadata:
+  DateCreated: '1563008340000'
+  DateModified: '1563008340000'
+Platform:
+  PlatformArn: :platform_arn:
+OptionSettings:
+  aws:elasticbeanstalk:application:environment:
+    EB_APP_ENV: :eb_app_env:
+    AWS_REGION: :aws_region:
+    AWS_ACCESS_KEY_ID: :aws_access_key_id:
+    AWS_SECRET_ACCESS_KEY: :aws_secret_access_key:
+    AWS_S3_BUCKET: :aws_s3_bucket:
+  aws:elasticbeanstalk:environment:
+    EnvironmentType: SingleInstance
+    ServiceRole: aws-elasticbeanstalk-service-role
+  aws:autoscaling:launchconfiguration:
+    SecurityGroups: web-server,spycetek-db-access
+    IamInstanceProfile: aws-elasticbeanstalk-ec2-role
+    InstanceType: :instance_type:
+  AWSEBAutoScalingLaunchConfiguration.aws:autoscaling:launchconfiguration:
+    EC2KeyName: :ec2_key_name:
+  aws:elasticbeanstalk:container:custom:php:
+    composer_options: --no-dev
+EnvironmentTier:
+  Type: Standard
+  Name: WebServer
+AWSConfigurationTemplateVersion: 1.1.0.0

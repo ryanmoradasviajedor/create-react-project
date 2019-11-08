@@ -1,0 +1,8 @@
+
+#################################################
+# Credentials for GMO Payment Gateway Plugin
+#################################################
+PROP_KEY_SHOP_ID=:prop_key_shop_id:
+PROP_KEY_SHOP_PW=:prop_key_shop_pw:
+PROP_KEY_SITE_ID=:prop_key_site_id:
+PROP_KEY_SITE_PW=:prop_key_site_pw:

@@ -1,0 +1,117 @@
+# .env file for local environment
+# Do NOT commit .env file.
+
+# This overrides /config files with the files in the directory of the same name.
+# dev: for local development
+# test: for test server
+# autotest: for automated tests
+# production: for production server
+APP_ENV=dev
+
+#################################################
+# For config/app.php
+#################################################
+APP_DEBUG=true
+APP_URL=:app_url:
+APP_KEY=:app_key:
+# APP_TIMEZONE should match with the DB's timezone
+APP_TIMEZONE=UTC
+APP_LOCALE=en
+
+# Supported: "single", "daily", "syslog", "errorlog"
+APP_LOG=daily
+
+#################################################
+# For config/cms.php
+#
+# *_DISK supports: "local", "s3"
+# *_CDN is ignored if _DISK is "local"
+#################################################
+CMS_MEDIA_DISK=local
+CMS_MEDIA_FOLDER=media
+#CMS_MEDIA_CDN=https://d1x8olhzk5ywux.cloudfront.net
+CMS_UPLOAD_DISK=local
+CMS_UPLOAD_FOLDER=uploads
+#CMS_UPLOAD_CDN=https://d1x8olhzk5ywux.cloudfront.net
+
+# Stores changes to cms/static pages made
+# from the admin site onto the database.
+# This should be `false` on your local environment.
+DATABASE_TEMPLATES=false
+
+#################################################
+# For config/database.php
+#################################################
+DB_CONNECTION=:bd_connection:
+DB_HOST=:db_host:
+DB_PORT=:db_port:
+DB_DATABASE=:db_database:
+DB_USERNAME=:db_username:
+DB_PASSWORD=:db_passowrd:
+
+#################################################
+# For Mail configuration
+#################################################
+MAIL_DRIVER=ses
+MAIL_FROM_ADDRESS=kanji.furuhashi+info@spycetek.com
+MAIL_FROM_NAME="SpyceTek Inc."
+SES_REGION=us-west-2
+
+#################################################
+# AWS
+#################################################
+# Account: ext-service-tech-2@spycetek.com
+# IAM User: :iam_user:
+AWS_ACCESS_KEY_ID=XXXXXXXXXXXXXXXXX
+AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+AWS_REGION=:aws_region:
+#AWS_S3_BUCKET=test-octo-jewelry_kanji-furuhashi
+# S3 folder for OctoberCMS media. This could be anything.
+#AWS_S3_MEDIA_FOLDER=media
+# Path to access S3 files. To use CloudFront, set CloudFront URL here.
+#AWS_STORAGE_URL=https://s3-ap-southeast-1.amazonaws.com/my_bucket
+
+#################################################
+# Remote Environment (As Source of Test Data)
+# Only for test/development environment.
+# For `database download` & `imageimport` command
+#################################################
+REMOTE_ENV_HOST=:remote_env_host:
+REMOTE_ENV_WEB_USER=nginx
+REMOTE_ENV_KEY=/var/lib/nginx/.ssh/key_aws_october.pem
+REMOTE_ENV_PJ_DIR=/var/www/html
+REMOTE_ENV_S3_REGION=ap-southeast-1
+REMOTE_ENV_S3_BUCKET=:remote_env_s3_bucket:
+
+#################################################
+# For GMO Payment Gateway Plugin
+#################################################
+# String to differentiate order IDs on shared GMO test shops.
+GMO_ORDER_ID_SUFFIX=-xxxxxx-
+# GMO PG credentials
+PROP_KEY_SHOP_ID=XXXXXXXXXXXXXXX
+PROP_KEY_SHOP_PW=XXXXXXXXXXXXXXX
+PROP_KEY_SITE_ID=XXXXXXXXXXXXXXX
+PROP_KEY_SITE_PW=XXXXXXXXXXXXXXX
+
+#################################################
+# For unit testing on local machine
+#################################################
+TESTING_APP_URL=http://localhost-samuraicraft
+
+#################################################
+# For browser testing on local machine
+#################################################
+SELENIUM_HUB_URL=http://docker.for.mac.localhost:4444/wd/hub
+
+#################################################
+# etc
+#################################################
+CACHE_DRIVER=file
+SESSION_DRIVER=file
+QUEUE_DRIVER=sync
+ROUTES_CACHE=false
+ASSET_CACHE=false
+LINK_POLICY=detect
+ENABLE_CSRF=false
+ADMIN_SITE_URL=:app_url:

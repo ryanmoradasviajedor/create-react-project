@@ -1,0 +1,11 @@
+
+[{*.ng,*.sht,*.html,*.shtm,*.shtml,*.twig,*.htm}]
+# Use tab to reduce characters in HTML files.
+indent_style = tab
+tab_width = 4
+
+# Use single quote to avoid collision with JSON's quotation, which is double quote.
+ij_html_quote_style = single
+
+[*.md]
+trim_trailing_whitespace = false

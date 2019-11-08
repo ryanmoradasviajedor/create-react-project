@@ -1,0 +1,2 @@
+            "tests/CreatesApplication.php",
+            "tests/DuskTestCase.php",

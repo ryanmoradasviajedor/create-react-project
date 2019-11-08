@@ -1,0 +1,23 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_style = space
+indent_size = 4
+
+[{*.ng,*.sht,*.html,*.shtm,*.shtml,*.twig,*.htm}]
+# Use tab to reduce characters in HTML files.
+indent_style = tab
+tab_width = 4
+
+# Use single quote to avoid collision with JSON's quotation, which is double quote.
+ij_html_quote_style = single
+
+[*.md]
+trim_trailing_whitespace = false
